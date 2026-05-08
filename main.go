@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"strings"
 
-	_ "github.com/mattn/go-sqlite3"
+	_ "modernc.org/sqlite"
 )
 
 var db *sql.DB
@@ -90,7 +90,7 @@ func initDB() error {
 	}
 
 	var err error
-	db, err = sql.Open("sqlite3", storagePath+"/wiki.db")
+	db, err = sql.Open("sqlite", storagePath+"/wiki.db")
 	if err != nil {
 		return err
 	}
