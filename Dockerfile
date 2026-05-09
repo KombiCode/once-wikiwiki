@@ -12,6 +12,6 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 COPY --from=builder /app/wiki .
 VOLUME ["/storage"]
-ENV PORT=8080
-EXPOSE 8080
+ENV PORT=80
+EXPOSE 80
 CMD ["./wiki"]

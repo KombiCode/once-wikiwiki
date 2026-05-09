@@ -13,7 +13,7 @@ A simple wiki written in Go using SQLite.
 
 ```bash
 docker build -t once-wikiwiki .
-docker run -p 8080:8080 -v $(pwd)/storage:/storage once-wikiwiki
+docker run -p 8080:80 -v $(pwd)/storage:/storage once-wikiwiki
 ```
 
 Or use Docker Compose:
